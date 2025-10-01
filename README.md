@@ -1,2 +1,2 @@
 # shared-minds
-week3-implicit/explicit
+see what Vivian has vibe-coded
