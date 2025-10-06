@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDM vs Vocaloid Similarity</title>
+    <style>
+        body { font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; }
+        input[type="file"] { display: block; margin: 10px 0 20px 0; }
+        #log { border: 1px solid #ccc; padding: 10px; min-height: 100px; background-color: #f9f9f9; }
+        .error { color: #f44336; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>🎶 Song Comparison Tool</h1>
+    
+    <label for="edm-upload">Upload EDM Song:</label>
+    <input type="file" id="edm-upload" accept="audio/*">
+
+    <label for="vocaloid-upload">Upload Vocaloid Song:</label>
+    <input type="file" id="vocaloid-upload" accept="audio/*">
+
+    <h2>Status Log</h2>
+    <div id="log"></div>
+
+    <script src="sketch.js"></script> 
+</body>
+</html>
