@@ -1,21 +1,14 @@
-/*
-  Single-page network visualization: nodes (bubbles) + connections
-  - Hover, drag, tap interactions affect node size, color, and edge strength
-  - Algorithmic emergent "bullying" patterns: dominance (red/expand), exclusion (fade/detach), cluster formation
-  - Preserves replicate proxy variable and Firebase helper placeholders for compatibility
-*/
-
 // kept from original project for potential asset requests
 const replicateProxy = "https://itp-ima-replicate-proxy.web.app/api/create_n_get";
 
-// Firebase placeholder (remove or initialize if you want to store state externally)
+// Firebase placeholder
 let db = null;
 
-// --- Firebase auth integration (modular v10 SDK). Replace with your config.
+// --- Firebase auth integration (modular v10 SDK).
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js';
 import { getAuth, signOut, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js';
 
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// For Firebase JS SDK v7.20.0 and later
 const firebaseConfig = {
   apiKey: "AIzaSyCTMrFlfV4rXm3zcvbmC8etwT8lqVKF4dY",
   authDomain: "sharedminds-c3e82.firebaseapp.com",
