@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Spirited Away</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <h1 style="text-align:center;margin:10px 0;font-family:Arial;">Spirited Away</h1>
+    <p id="introText" style="text-align:center;font-family:Arial;margin:0 0 8px 0;font-size:14px;">Sign in to create and interact with your own bubble.</p>
+    <div id="topControls" style="text-align:center;margin-bottom:12px;color:#222;">
+        <button id="resetBtn">Reset Network</button>
+        <button id="toggleSimBtn">Pause Simulation</button>
+        <label style="margin-left:12px;font-size:13px;"><input type="checkbox" id="autoEvents" checked> Auto emergent events</label>
+        <button id="signInBtn" style="margin-left:16px;">Sign In to interact</button>
+        <button id="signOutBtn" style="display:none;margin-left:6px;">Sign Out</button>
+        <span id="userLabel" style="margin-left:8px;font-weight:600;color:inherit"></span>
+    </div>
+
+        <!-- Sign-in modal -->
+        <div id="signInModal" class="modal" style="display:none; position:fixed;left:0;top:0;right:0;bottom:0;align-items:center;justify-content:center;background:rgba(0,0,0,0.4);">
+                    <div style="background:white;padding:18px;border-radius:8px;max-width:420px;margin:auto;text-align:center;">
+                        <h3 style="margin-top:0">Sign in to control your bubble</h3>
+                        <p style="font-size:13px;color:#333">Sign in with Email/Password to control your bubble. We will assign a random name to your bubble.</p>
+                        <div style="margin-top:12px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap;">
+                            <button id="modalCloseBtn">Cancel</button>
+                        </div>
+                        <hr style="margin:12px 0">
+                        <div style="text-align:left;max-width:360px;margin:0 auto;">
+                            <!-- display name removed: names are randomly assigned -->
+                            <label style="font-size:13px;display:block;margin-bottom:6px">Email</label>
+                            <input id="modalEmail" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" type="email" placeholder="" style="width:100%;padding:8px;margin-bottom:8px" />
+                            <label style="font-size:13px;display:block;margin-bottom:6px">Password</label>
+                            <input id="modalPassword" autocomplete="off" type="password" placeholder="" style="width:100%;padding:8px;margin-bottom:8px" />
+                            <div style="display:flex;gap:8px;justify-content:space-between">
+                                <button id="modalEmailSignUpBtn">Sign up (email)</button>
+                                <button id="modalEmailSignInBtn">Sign in (email)</button>
+                            </div>
+                        </div>
+                        <div id="modalError" style="color:#a00;margin-top:8px;display:none;font-size:13px;"></div>
+                    </div>
+            </div>
+        </div>
+    <canvas id="networkCanvas" style="display:block; width:100%; height:75vh; border-top:1px solid #eee;"></canvas>
+    <!-- Bottom-center action bar (hidden until signed in) -->
+    <div id="actionBar" style="position:fixed;left:50%;bottom:18px;transform:translateX(-50%);background:rgba(255,255,255,0.95);padding:8px 12px;border-radius:999px;box-shadow:0 6px 18px rgba(0,0,0,0.06);display:flex;align-items:center;gap:8px;flex-wrap:nowrap;white-space:nowrap;">
+        <input id="userActionInput" name="action_input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" style="flex:1;min-width:220px;padding:8px 10px;border-radius:6px;border:1px solid #ddd;display:none;" />
+        <button id="userActionSendBtn" style="display:none;padding:8px 10px;border-radius:6px">Send</button>
+    <div id="actionHint" style="display:none;font-size:13px;color:#000000;opacity:1;margin-left:6px;">Type something or send an emoji</div>
+    </div>
+    <!-- Load the main script as a module (uses Firebase v10 modular SDK) -->
+    <script type="module" src="sketch.js"></script>
+</body>
+</html>
