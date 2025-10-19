@@ -1,0 +1,10 @@
+/* Simple styling for the prototype chooser */
+html,body{height:100%;margin:0;font-family:Arial,Helvetica,sans-serif;background:#f7f9fb;color:#111}
+.wrap{max-width:900px;margin:32px auto;padding:20px;text-align:center}
+.img-wrap{background:#fff;border-radius:8px;padding:10px;box-shadow:0 6px 18px rgba(0,0,0,0.08);display:inline-block}
+#levels-img{max-width:860px;width:100%;height:auto;display:block}
+.choices{margin-top:18px}
+.choices button{font-size:20px;padding:12px 18px;margin:6px;border:1px solid #ccc;border-radius:6px;background:#fff;cursor:pointer}
+.choices button:active{transform:translateY(1px)}
+.status{margin-top:12px;color:#444}
+.hint{color:#666;margin-top:8px}

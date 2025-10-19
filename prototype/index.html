@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Apple Imagery Levels — Prototype</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<main class="wrap">
+		<h1>When you think of an apple, which image matches what you imagine?</h1>
+		<p class="hint">Click the number (1–5) that best matches your mental image. Only your choice (1–5) will be recorded.</p>
+
+			<div class="img-wrap">
+				<!-- Using the image file you added in the folder -->
+				<img id="levels-img" src="Aphantasia_apple_test.png" alt="Levels image">
+			</div>
+
+		<div class="choices" id="choices">
+			<button data-choice="1">1</button>
+			<button data-choice="2">2</button>
+			<button data-choice="3">3</button>
+			<button data-choice="4">4</button>
+			<button data-choice="5">5</button>
+		</div>
+
+		<div id="status" class="status"></div>
+	</main>
+
+	<script type="module" src="sketch.js"></script>
+</body>
+</html>
