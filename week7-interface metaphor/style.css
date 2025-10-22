@@ -1,0 +1,15 @@
+/* Minimal project stylesheet — most layout is injected by sketch.js but
+   this file ensures sensible defaults and supports mobile sizing. */
+a,html,body{height:100%;margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;background:#f3f3f3}
+a{color:inherit}
+button{font-family:inherit}
+/* Ensure the video area won't overflow on small screens */
+.cp-wrap{min-height:100vh}
+/* responsive: stack panels on narrow screens */
+@media (max-width:720px){
+   .cp-wrap{flex-direction:column;padding:12px}
+   .panel{height:50vh}
+}
+
+/* prefer border-box sizing everywhere */
+*,*::before,*::after{box-sizing:border-box}
