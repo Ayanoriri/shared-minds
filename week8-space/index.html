@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>Shared Minds — 3D Apple</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div id="app">
+			<header>
+				<h1>Draw the apple in your mind's eye</h1>
+				<p>submit your mind's eye of an apple, and watch the shared 3D apple evolve.</p>
+			</header>
+
+			<main>
+				<section id="left">
+					<canvas id="drawCanvas" width="512" height="512"></canvas>
+								<div class="controls">
+									<label>Brush size: <input id="brush" type="range" min="1" max="60" value="16"></label>
+									<label>Color: <input id="colorPicker" type="color" value="#000000"></label>
+									<button id="clearBtn">Clear</button>
+									<button id="submitBtn">Submit</button>
+									<div id="status" class="status">Not connected</div>
+								</div>
+				</section>
+
+					<section id="right">
+						<div id="threeContainer">
+							<!-- orbit viewer will insert an <img> or placeholder here -->
+						</div>
+						<div class="legend">Submissions: <span id="count">0</span></div>
+					</section>
+			</main>
+
+			<footer>
+				<small>Using Firebase Realtime Database (sharedminds-c3e82). Showing submitted apples in the orbit viewer.</small>
+			</footer>
+		</div>
+
+			<!-- Load Three.js UMD build for the slices view, then our module -->
+			<script src="https://cdn.jsdelivr.net/npm/three@0.154.0/build/three.min.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/three@0.154.0/examples/js/controls/OrbitControls.js"></script>
+			<script type="module" src="sketch.js"></script>
+	</body>
+	</html>
+
