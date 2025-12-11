@@ -1,0 +1,43 @@
+/* Font Faces */
+@font-face {
+  font-family: 'Hagrid';
+  src: url('hagrid/Hagrid-Regular-trial.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Hagrid';
+  src: url('hagrid/Hagrid-Regular-trial.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Hagrid';
+  src: url('hagrid/Hagrid-Italic-trial.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Hagrid';
+  src: url('hagrid/Hagrid-Text-Extrabold-trial.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Hagrid';
+  src: url('hagrid/Hagrid-Text-Extrabold-Italic-trial.ttf') format('truetype');
+  font-weight: 800;
+  font-style: italic;
+}
+
+/* Page background color */
+body {
+ 	background-color: #EEE9E2;
+    /* Use Hagrid as the primary font */
+    font-family: 'Hagrid', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
