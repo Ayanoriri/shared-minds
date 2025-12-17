@@ -1,0 +1,74 @@
+/* Font Faces */
+@font-face {
+  font-family: 'Roboto';
+  src: url('https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfBBc4EsA.woff2') format('woff2');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Hagrid';
+  src: url('hagrid/Hagrid-Regular-trial.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Hagrid';
+  src: url('hagrid/Hagrid-Regular-trial.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Hagrid';
+  src: url('hagrid/Hagrid-Italic-trial.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Hagrid';
+  src: url('hagrid/Hagrid-Text-Extrabold-trial.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Hagrid';
+  src: url('hagrid/Hagrid-Text-Extrabold-Italic-trial.ttf') format('truetype');
+  font-weight: 800;
+  font-style: italic;
+}
+
+/* Page background color */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+ 	background-color: #EEE9E2;
+    /* Use Hagrid as the primary font */
+    font-family: 'Hagrid', system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+}
+
+main {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+canvas {
+    display: block;
+}
+
